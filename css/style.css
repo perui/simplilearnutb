@@ -1,22 +1,88 @@
 
-.menu a {
-    color: white;
-    text-decoration: none;
-    background-color: black;
-  
-}
-nav li {
-    display: inline;
-  
- 
-}
 
-
-
-
-
-nav   {
-    background-color: black;
+.card {
+    width: 25rem;
+    border: #000000;
+    border-style: dashed;
+    width: auto;
     
-   
+    
 }
+
+.grid-container {
+    display: inline-grid ;
+    grid-template-columns: auto auto auto auto; 
+    padding: 0px;
+    column-gap: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 15px;
+    width: 18rem;
+    gap: 0px;
+ 
+  }
+
+.wrapper{
+    margin: auto;
+    justify-items: center;
+}
+.jumbotron {
+    background-image: url("../images/food.jpg");
+
+}
+
+h1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
+body {
+    background: hsl(35, 59%, 87%)!important;
+}
+.container-fluid{
+    background-color:  hwb(35 70% 3%);
+}
+
+/* modal */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 50%; 
+    height: 100%; 
+    overflow: auto; 
+}
+    
+  
+
+  .modal-content {
+    background-color:hsl(35, 59%, 87%);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+
+  .close {
+    color: #2b2929;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

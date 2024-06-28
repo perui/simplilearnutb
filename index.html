@@ -3,19 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>front page</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/validation.js"></script>
 </head>
 <body>
     <header>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html" class="link">Home</a></li>
-                <li><a href="login.html">Log in</a></li>     
-                
-            </ul>
-        </nav>
+        <div class="jumbotron">
+           
+            <h1 class="text-center"> Anna´s food</h1>
+        </div>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Food categories
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./meat.html">Meat</a></li>
+                <li><a href="./fish">Fish</a></li>
+                <li><a href="./chicken">Chicken</a></li>
+              </ul>            
+            </li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <button id="loginb">Log in</a></button>
+            <button id="regb">Register</button>
+          </ul>               
+       
+        </div>       
+        
+      </nav>
+
+      <!--Modal login-->
+      <div id="login" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form method="post" onsubmit="validation()">
+            <label for="username">User name</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password</label><br>
+            <input type="text" id="password" name="password"><br><br>
+            <button type="submit">Log in</button>      
+          </form>
+
+        </div>
+
+      </div>
+      <!--modal register-->
+
+      <div id="reg" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form method="post" onsubmit="validation()">
+            <label for="email">E-mail</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="surname">Surname</label><br>
+            <input type="text" id="surname" name="surname"><br>
+            <label for="username">User name</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password</label><br>
+            <input type="text" id="password" name="password"><br><br>
+            <button type="submit">Log in</button>      
+          </form>
+
+        </div>
+
+      </div>
+  <script>
+    
+    let modallog = document.getElementById("login");
+    let btnlog = document.getElementById("loginb");
+    let spanlog = document.getElementsByClassName("close")[0];
+
+    let modalreg = document.getElementById("reg");
+    let btnreg = document.getElementById("regb");
+    let spanreg = document.getElementsByClassName("close")[0];
+    
+
+    btnlog.onclick = function() {
+      modallog.style.display = "block";
+    }
+
+    spanlog.onclick = function(){
+      modallog.style.display = "none";
+     
+    }
+
+    btnreg.onclick = function() {
+      modalreg.style.display = "block";
+    }
+
+    spanreg.onclick = function(){      
+      modalreg.style.display = "none";
+    }    
+
+  </script>
+        
+        
+          
+        
     </header>   
+    
+   
+
+
+
 
     <footer></footer>
     
